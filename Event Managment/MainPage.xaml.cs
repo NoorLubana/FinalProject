@@ -1,4 +1,6 @@
-﻿namespace Event_Managment
+﻿using Microsoft.Maui.Controls;
+
+namespace Event_Managment
 {
     public partial class MainPage : ContentPage
     {
@@ -10,7 +12,8 @@
         private async void OnCreateEventClicked(object sender, EventArgs e)
         {
             // Navigate to EventCreation page
-           await Navigation.PushAsync(new EventCreation());
+            await Navigation.PushAsync(new EventCreation());
+        }
 
         private async void OnCreateTaskClicked(object sender, EventArgs e)
         {

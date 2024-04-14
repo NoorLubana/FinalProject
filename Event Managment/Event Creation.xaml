@@ -1,39 +1,53 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Event_Managment"
              x:Class="Event_Managment.EventCreation">
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-      
 
             <Label
                 Text="Event Name"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
-            
-            <Entry x:Name="entry"
-                 Placeholder="Enter text"
-                />
-            
+
+            <Entry x:Name="eventNameEntry"
+                   Placeholder="Enter event name" />
+
+            <Label
+                Text="Event Location"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry x:Name="eventLocationEntry"
+                   Placeholder="Enter event location" />
+
             <Label
                 Text="Event Date"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
 
-            <DatePicker MinimumDate="01/01/2024"
-               MaximumDate="12/31/2025"
-               Date="04/06/2024" />
+            <DatePicker x:Name="eventDatePicker"
+                        MinimumDate="01/01/2024"
+                        MaximumDate="12/31/2025"
+                        Date="04/06/2024" />
+
+            <Label
+                Text="Event Time"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <TimePicker x:Name="eventTimePicker"
+                        Format="h:mm tt" />
 
             <Button
-                x:Name="CreateEvent"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCreateEventClick"
+                x:Name="CreateEventButton"
+                Text="Create Event" 
+                Clicked="OnCreateEventClicked"
                 HorizontalOptions="Fill" />
+
         </VerticalStackLayout>
     </ScrollView>
 

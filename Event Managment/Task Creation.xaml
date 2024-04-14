@@ -1,12 +1,14 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Event_Managment"
              x:Class="Event_Managment.TaskCreation">
+    
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+
             <Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"
@@ -18,16 +20,44 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
+            <Label
+                Text="Your Name"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry x:Name="nameEntry"
+                   Placeholder="Enter your name" />
+
+            <Label
+                Text="Event Name"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry x:Name="eventNameEntry"
+                   Placeholder="Enter event name" />
+
+            <Label
+                Text="Your Age"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry x:Name="ageEntry"
+                   Placeholder="Enter your age" 
+                   Keyboard="Numeric" />
+
             <local:CustomCheckBox x:Name="stageSetupCheckbox" Text="Stage Set Up" />
             <local:CustomCheckBox x:Name="foodHandlerCheckbox" Text="Food Handler" />
             <local:CustomCheckBox x:Name="groundsCleanerCheckbox" Text="Grounds Cleaner" />
             <local:CustomCheckBox x:Name="ticketCheckerCheckbox" Text="Ticket Checker" />
             <local:CustomCheckBox x:Name="usherCheckbox" Text="Usher" />
 
+
             <Button
                 x:Name="CreateTask"
                 Text="Assign Tasks" 
+                Clicked="OnCreateTaskClick"
                 HorizontalOptions="Fill" />
+            
 
         </VerticalStackLayout>
     </ScrollView>
