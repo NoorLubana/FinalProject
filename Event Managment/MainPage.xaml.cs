@@ -2,19 +2,20 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private async void OnCounterClicked(object sender, EventArgs e)
+        private async void OnCreateEventClicked(object sender, EventArgs e)
         {
-           EventCreation Page = new EventCreation();
+            // Navigate to EventCreation page
            await Navigation.PushAsync(new EventCreation());
 
+        private async void OnCreateTaskClicked(object sender, EventArgs e)
+        {
+            // Navigate to TaskCreation page
+            await Navigation.PushAsync(new TaskCreation());
         }
     }
-
 }

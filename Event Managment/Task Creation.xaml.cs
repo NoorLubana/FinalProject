@@ -2,8 +2,6 @@
 {
     public partial class TaskCreation : ContentPage
     {
-     
-
         public TaskCreation()
         {
             InitializeComponent();
@@ -17,4 +15,4 @@
         }
     }
 
-}
+
