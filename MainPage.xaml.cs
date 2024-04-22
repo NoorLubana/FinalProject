@@ -18,3 +18,4 @@
     }
 
 }
+/*designed to manage interactions within this main page, specifically focusing on navigating to another page within the application when a button is clicked*/
